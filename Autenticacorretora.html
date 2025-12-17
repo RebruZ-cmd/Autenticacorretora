@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="br-PT", class="scroll-smooth"> <!-- idioma do pais e rolagem mais devagar-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autêntica Corretora de Seguros</title> <!-- título da página -->
+    <script src='https://cdn.tailwindcss.com'></script> <!-- link para o tailwindcss (aplicativo de estilização)-->
+    <script src='https://cdn.emailjs.com/dist/email.min.js'></script> <!-- link para o emailjs -->
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans"> <!-- corpo da página -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class='max-w-7xl mx-auto px-6 py-4 flex justify-between items-center'> <!-- container do cabeçalho -->
+         <h1 class='text-2xl font-bold text-indigo-600'>Autêntica Corretora de Seguros</h1> <!-- título da página -->
+            <nav class='space-x-6 text-sm font-medium'> <!-- navegação -->
+             <a href="#hero" class="hover:text-indigo-600 transition"> Início</a> <!-- links de navegação -->
+             <a href="#Sobre" class="hover:text-indigo-600 transition"> Sobre</a>
+             <a href="#Contato" class="hover:text-indigo-600 transition"> Contato</a>
+            </nav> <!-- fim da navegação -->
+        </div> <!-- fim do container do cabeçalho -->
+    </header> <!-- fim do cabeçalho -->
+
+    <section id="hero" class="pt-32 pb-20 bg-white"> <!-- seção principal -->
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Bem-vindo à Autêntica Corretora de Seguros</h2>
+            <p class="text-lg text-gray-600 mb-8">Oferecemos as melhores soluções personalizadas para proteger o seu futuro.</p>
+            <a href="#Contato" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">Entre em Contato</a>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2VndXJvfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="Imagem de Seguros" class="w-full h-64 object-cover mt-8 rounded-md shadow-md">
+        </div>
+    </section>
+
+    <section id="Sobre" class="py-20 bg-gray-100"> <!-- seção sobre -->
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Sobre Nós</h2>
+            <p class="text-lg text-gray-600 mb-4">Na Autêntica Corretora de Seguros, nossa missão é fornecer soluções de seguros confiáveis e acessíveis para nossos clientes. Com anos de experiência no mercado, nossa equipe dedicada está pronta para ajudar você a encontrar a cobertura perfeita para suas necessidades.</p>
+            <p class="text-lg text-gray-600">Valorizamos a transparência, a integridade e o atendimento ao cliente, garantindo que você se sinta seguro e protegido em todas as etapas do processo.</p>
+        </div>
+    </section>
+
+    <section id="Contato" class="py-20 bg-white"> <!-- seção de contato -->
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Entre em Contato</h2>
+            <form id="contactForm" class="space-y-6 max-w-lg"> <!-- formulário de contato -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Nome</label> <!-- rótulo do campo nome -->
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
+                    <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                </div>
+                <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition">Enviar Mensagem</button>
+            </form> <!-- fim do formulário de contato -->
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-6 mt-10 mb-0"> <!-- rodapé -->
+        <div class="max-w-8xl mx-auto px-6 text-center">
+            <p>&copy; 2024 Autêntica Corretora de Seguros. Todos os direitos reservados.</p>
+        </div>
+    </footer> <!-- fim do rodapé -->
+    
+</body>
+</html>
+
+<script>
+    (function(){
+        emailjs.init('UserId');
+    })();
+
+    const form = document.getElementById('contactForm');
+    const feedback = document.getElementById('feedback');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('serviceId service_p3pd3ez', 'templateId', this)
+            .then(function() {
+                alert('Mensagem enviada com sucesso!'); 
+                form.reset();
+            }, function(error) {
+                alert('Erro ao enviar a mensagem: ' + JSON.stringify(error));
+            });
+    });
+</script>
+
+<!-- substitua 'UserId', 'serviceId' e 'templateId' pelos valores reais do EmailJS --></html>
+<!-- Login autenticacorretora senha Renzo2004 FTP autenticacorretora_admin Renzo2004-->
