@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autêntica Corretora de Seguros</title> <!-- título da página -->
+    <link rel="icon" type="image/png" sizes=32x32 href="icone do site.png"> <!-- ícone da página -->
     <script src='https://cdn.tailwindcss.com'></script> <!-- link para o tailwindcss (aplicativo de estilização)-->
     <script src='https://cdn.emailjs.com/dist/email.min.js'></script> <!-- link para o emailjs -->
 </head>
@@ -43,7 +44,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
             <!-- Veículos -->
-            <div class="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+            <div class="bg-gray-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
                 <h3 class="text-xl font-semibold mb-4">🚗 Veículos</h3>
                 <ul class="text-gray-600 space-y-2">
                     <li>• Carros</li>
@@ -56,7 +57,7 @@
             </div>
 
             <!-- Residência -->
-            <div class="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+            <div class="bg-gray-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
                 <h3 class="text-xl font-semibold mb-4">🏠 Residência</h3>
                 <p class="text-gray-600 mb-4">
                     Proteção completa para sua casa e patrimônio.
@@ -67,7 +68,7 @@
             </div>
 
             <!-- Vida -->
-            <div class="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+            <div class="bg-gray-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
                 <h3 class="text-xl font-semibold mb-4">❤️ Vida</h3>
                 <p class="text-gray-600 mb-4">
                     Segurança financeira para você e sua família.
@@ -78,7 +79,7 @@
             </div>
 
             <!-- Viagem -->
-            <div class="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+            <div class="bg-gray-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
                 <h3 class="text-xl font-semibold mb-4">✈️ Viagem</h3>
                 <p class="text-gray-600 mb-4">
                     Tranquilidade e assistência onde você estiver.
@@ -152,28 +153,28 @@
     </svg>
 </a> <!-- botão flutuante do whatsapp --> 
 
-</body>
 <html>
     <script>
         (function(){
-            emailjs.init('UserId');
+            emailjs.init('c64koerryXk_NUtdJ'); // substitua 'UserId' pelo seu User ID do EmailJS
         })();
 
         const form = document.getElementById('contactForm');
-        const feedback = document.getElementById('feedback');
 
         form.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            emailjs.sendForm('serviceId service_p3pd3ez', 'templateId', this)
-                .then(function() {
+            emailjs.sendForm('service_p3pd3ez', 'template_y3kjf1d', this // substitua 'serviceId' e 'templateId' pelos valores reais do EmailJS
+            ).then(function() {
                     alert('Mensagem enviada com sucesso!'); 
                     form.reset();
                 }, function(error) {
                     alert('Erro ao enviar a mensagem: ' + JSON.stringify(error));
+                    console.log(error);
                 });
         });
     </script>
+</body>
 </html>
 <!-- substitua 'UserId', 'serviceId' e 'templateId' pelos valores reais do EmailJS -->
 <!-- Login autenticacorretora senha Renzo2004 FTP autenticacorretora_admin Renzo2004-->
